@@ -4,16 +4,16 @@ import BookCard from './components/BookCard'
 import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button'
+
 
 function App() {
   const [result, setResult] = useState(([]))
-  const apiKey = "AIzaSyDg3BvbTu5Wb-aP1hWU-RCR6S6lhC_pbNM"
+ 
   
 
     function submitHandler(book){
       !book ? alert("you must fill the form") : 
-        fetch("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key="+ apiKey+ "&maxResults=10", {
+        fetch("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key="+ process.env.REACT_APP_API_KEY + "&maxResults=10", {
           headers: {
             'Content-Type': 'application/json'
           }
