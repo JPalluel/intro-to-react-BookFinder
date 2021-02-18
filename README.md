@@ -2,6 +2,6 @@
 
 Creation of A book Finder App, using google books API
 
-Practice on Componens and Hooks
+Practice on Components and Hooks
 
  https://jpalluel.github.io/intro-to-react-BookFinder/
