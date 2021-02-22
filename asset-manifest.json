@@ -1,25 +1,17 @@
 {
-  "files": {
-    "main.css": "/intro-to-react-BookFinder/static/css/main.ff749ca4.chunk.css",
-    "main.js": "/intro-to-react-BookFinder/static/js/main.5361552f.chunk.js",
-    "main.js.map": "/intro-to-react-BookFinder/static/js/main.5361552f.chunk.js.map",
-    "runtime-main.js": "/intro-to-react-BookFinder/static/js/runtime-main.7627d4aa.js",
-    "runtime-main.js.map": "/intro-to-react-BookFinder/static/js/runtime-main.7627d4aa.js.map",
-    "static/css/2.150d169a.chunk.css": "/intro-to-react-BookFinder/static/css/2.150d169a.chunk.css",
-    "static/js/2.ef3d0bdb.chunk.js": "/intro-to-react-BookFinder/static/js/2.ef3d0bdb.chunk.js",
-    "static/js/2.ef3d0bdb.chunk.js.map": "/intro-to-react-BookFinder/static/js/2.ef3d0bdb.chunk.js.map",
-    "static/js/3.50c1f80b.chunk.js": "/intro-to-react-BookFinder/static/js/3.50c1f80b.chunk.js",
-    "static/js/3.50c1f80b.chunk.js.map": "/intro-to-react-BookFinder/static/js/3.50c1f80b.chunk.js.map",
-    "index.html": "/intro-to-react-BookFinder/index.html",
-    "static/css/2.150d169a.chunk.css.map": "/intro-to-react-BookFinder/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.ff749ca4.chunk.css.map": "/intro-to-react-BookFinder/static/css/main.ff749ca4.chunk.css.map",
-    "static/js/2.ef3d0bdb.chunk.js.LICENSE.txt": "/intro-to-react-BookFinder/static/js/2.ef3d0bdb.chunk.js.LICENSE.txt"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.7627d4aa.js",
-    "static/css/2.150d169a.chunk.css",
-    "static/js/2.ef3d0bdb.chunk.js",
-    "static/css/main.ff749ca4.chunk.css",
-    "static/js/main.5361552f.chunk.js"
-  ]
+  "main.css": "/intro-to-react-BookFinder/static/css/main.fe5889a9.chunk.css",
+  "main.js": "/intro-to-react-BookFinder/static/js/main.d311d06b.chunk.js",
+  "main.js.map": "/intro-to-react-BookFinder/static/js/main.d311d06b.chunk.js.map",
+  "runtime~main.js": "/intro-to-react-BookFinder/static/js/runtime~main.df8e2873.js",
+  "runtime~main.js.map": "/intro-to-react-BookFinder/static/js/runtime~main.df8e2873.js.map",
+  "static/css/2.d48414e3.chunk.css": "/intro-to-react-BookFinder/static/css/2.d48414e3.chunk.css",
+  "static/js/2.19daf741.chunk.js": "/intro-to-react-BookFinder/static/js/2.19daf741.chunk.js",
+  "static/js/2.19daf741.chunk.js.map": "/intro-to-react-BookFinder/static/js/2.19daf741.chunk.js.map",
+  "static/js/3.40e83c1d.chunk.js": "/intro-to-react-BookFinder/static/js/3.40e83c1d.chunk.js",
+  "static/js/3.40e83c1d.chunk.js.map": "/intro-to-react-BookFinder/static/js/3.40e83c1d.chunk.js.map",
+  "index.html": "/intro-to-react-BookFinder/index.html",
+  "precache-manifest.f57d6e52e035613f6cddf61ed4a81443.js": "/intro-to-react-BookFinder/precache-manifest.f57d6e52e035613f6cddf61ed4a81443.js",
+  "service-worker.js": "/intro-to-react-BookFinder/service-worker.js",
+  "static/css/2.d48414e3.chunk.css.map": "/intro-to-react-BookFinder/static/css/2.d48414e3.chunk.css.map",
+  "static/css/main.fe5889a9.chunk.css.map": "/intro-to-react-BookFinder/static/css/main.fe5889a9.chunk.css.map"
 }
