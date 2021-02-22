@@ -51,3 +51,17 @@ input {
   height: 38px;
   border-radius: 5px;
 }
+
+.list {
+  margin: 10px;
+}
+
+.list-counter {
+  margin: 5px;
+}
+
+.book-list {
+  float: left;
+  height: 100vh;
+  width: 200px;
+}

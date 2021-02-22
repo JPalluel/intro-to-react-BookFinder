@@ -1,15 +1,24 @@
-
+import React from'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import BookCard from './components/BookCard'
 import Header from './components/Header'
 import SearchBar from './components/SearchBar'
 import { useState } from 'react';
-
+import Badge from './components/Badge';
+import FavBookList from './components/FavBookList'
 
 function App() {
-  const [result, setResult] = useState(([]))
+  const [result, setResult] = useState(([]));
+  const [count, setCount] = useState(0);
+  const [list, setList] = useState([]);
+
+
+function addBook(title){
+  setCount(count + 1);
+  setList((prevBook) =>{return [...prevBook, title]})
+  console.log(list)
  
-  
+}
 
     function submitHandler(book){
       !book ? alert("you must fill the form") : 
@@ -31,14 +40,24 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Badge num={count}/>
+      <FavBookList title={list} />
 
       <SearchBar onSearched={submitHandler} onClickButton={(e) =>{ e.preventDefault()}}/>
 
       <div className="cards-container">
         {result.map( (book, index) => {
-        return <BookCard key= {index} id={index} title={book.volumeInfo.title} author={book.volumeInfo.authors} url={book.volumeInfo.imageLinks.smallThumbnail} href={book.volumeInfo.infoLink} />
-          })
-        }
+        return (
+        <BookCard key= {index} 
+        id={index} 
+        title={book.volumeInfo.title} 
+        author={book.volumeInfo.authors} 
+        url={book.volumeInfo.imageLinks.smallThumbnail}
+        href={book.volumeInfo.infoLink}
+        onAdd={addBook} />
+          )
+        })
+      }
         
        </div> 
 
