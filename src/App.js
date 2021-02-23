@@ -1,11 +1,11 @@
-import React from'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import BookCard from './components/BookCard'
-import Header from './components/Header'
-import SearchBar from './components/SearchBar'
+import React from'react';
 import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import BookCard from './components/BookCard';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar';
 import Badge from './components/Badge';
-import FavBookList from './components/FavBookList'
+import FavBookList from './components/FavBookList';
 
 function App() {
   const [result, setResult] = useState(([]));
@@ -16,33 +16,39 @@ function App() {
 function addBook(title){
   setCount(count + 1);
   setList((prevBook) =>{return [...prevBook, title]})
-  console.log(list)
- 
+  console.log(list);
 }
 
-    function submitHandler(book){
-      !book ? alert("you must fill the form") : 
-        fetch("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key="+ process.env.REACT_APP_API_KEY + "&maxResults=10", {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(response =>{
-            return response.json()
-        })
-        .then(data =>{
-            setResult(data.items)
-        })
-        .catch(err => console.log(err))
-    }
+function deleteBook(title){
+    if(list.length === 0){
+    setCount(0)
+  }
+  const newList = list.filter((item) => item !== title);
+  setList(newList);
+  setCount(count-1);
+}
 
-    
-  return (
+function submitHandler(book){
+  !book ? alert("you must fill the form") : 
+  fetch("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key="+ process.env.REACT_APP_API_KEY + "&maxResults=10", {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response =>{
+      return response.json()
+    })
+    .then(data =>{
+      setResult(data.items)
+    })
+    .catch(err => console.log(err))
+}
+
+return (
     <div className="App">
       <Header />
       <Badge num={count}/>
-      <FavBookList title={list} />
-
+      <FavBookList title={list} onRemove={deleteBook} />
       <SearchBar onSearched={submitHandler} onClickButton={(e) =>{ e.preventDefault()}}/>
 
       <div className="cards-container">
@@ -57,10 +63,8 @@ function addBook(title){
         onAdd={addBook} />
           )
         })
-      }
-        
-       </div> 
-
+        } 
+      </div> 
     </div>
   );
 }

@@ -12,8 +12,8 @@ function SearchBar(props){
 
     return(
         <form   className="search-bar">
-            <input type="text" placeholder="Search for an author, a book..." onChange={searchHandler} value={book}></input>
-              <Button  onClick= {()=> {props.onSearched(book)}}  type="button" variant="secondary">Search</Button>{' '}
+            <input type="text" placeholder="  Search for a book" onChange={searchHandler} value={book}></input>
+            <Button  onClick= {()=> {props.onSearched(book)}}  type="button" variant="secondary">Search</Button>{' '}
         </form>
     )
 }
